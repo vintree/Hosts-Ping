@@ -100,6 +100,11 @@
 	    }
 
 	    _createClass(Ping, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            this.refs.address.focus();
+	        }
+	    }, {
 	        key: 'handleStart',
 	        value: function handleStart() {
 	            var _this2 = this;
@@ -171,6 +176,7 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            alert('====');
 	            var _state2 = this.state;
 	            var submit = _state2.submit;
 	            var msgTotal = _state2.msgTotal;
@@ -227,7 +233,7 @@
 	                React.createElement(
 	                    'div',
 	                    { className: 'header' },
-	                    React.createElement('input', { className: 'search-input', type: 'text', placeholder: '\u8BF7\u8F93\u5165IP\u6216\u5730\u5740', ref: 'address', defaultValue: 'baidu.com' }),
+	                    React.createElement('input', { className: 'search-input', type: 'text', placeholder: '\u8BF7\u8F93\u5165IP\u6216\u5730\u5740', ref: 'address' }),
 	                    React.createElement(
 	                        'div',
 	                        { className: 'search-submit', onClick: this.handleStart.bind(this) },
@@ -5606,7 +5612,7 @@
 
 	module.exports = {
 		"name": "ping",
-		"version": "1.0.0",
+		"version": "1.0.1",
 		"description": "Hosts pluging Ping",
 		"main": "index.js",
 		"scripts": {
@@ -5615,8 +5621,9 @@
 		},
 		"keywords": ["Hosts", "Ping"],
 		"author": "puxiao",
-		"license": "ISC",
+		"license": "MIT",
 		"icons": "icons/app.png",
+		"switch": true,
 		"devDependencies": {
 			"babel": "^6.5.2",
 			"babel-core": "^6.14.0",
