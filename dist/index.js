@@ -176,7 +176,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            alert('====');
 	            var _state2 = this.state;
 	            var submit = _state2.submit;
 	            var msgTotal = _state2.msgTotal;
